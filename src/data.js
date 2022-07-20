@@ -2001,3 +2001,38 @@ const movies = [
     score: 8
   }
 ];
+
+function getAllDirectors(moviesArray){
+  const unique = [];
+  for (const element of moviesArray) {
+      if (!unique.includes(element)){
+          unique.push(element).map(value => movies.directors)
+      }
+  }
+}
+
+
+function getAllDirectors(moviesArray) {
+  const allDirectors = movies.map(directors => directors.director);
+  const unique = [];
+  for (const element of moviesArray) {
+    if (!unique.includes(element)){
+      unique.push(element)
+    }
+  }
+  return unique;
+} 
+console.log(getAllDirectors(movies))
+
+function uniquifyArray(words) {
+ 
+      const unique = [];
+    for (const word of words) {
+      if (!unique.includes(word)) {
+        unique.push(word);
+      }
+    } 
+    return unique;
+  }
+
+  
